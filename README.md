@@ -37,14 +37,20 @@ Entidad `Order`, simula una orden de compra, contiene una referencia al carrito 
 | DELETE | /api/data/orders                     | Elimina todas las ordenes de compra.                                                                                                                                     |    
 | DELETE | /api/data/order/{cartId}/{productId} | Elimina una orden de compra a partir de los identificadores de su carrito (`cartId`) y producto (`productId`).                                                           |
 
-# Instal·lación i arranque del proyecto
+# Instal·lación y arranque del proyecto
 
-
+Realizar build del proyecto con los prametros del Dockerfile y arrancar las imagenes de Docker configuradas en el archivo `docker-compose.yaml`.
 
 ```
-project_dir> ./mvnw install
-
-project_dir> docker-compose build
+project_dir> docker-compose build --no-cache
 
 project_dir> docker-compose up
+```
+
+# Tests
+
+Para realizar los tests unitarios
+
+```
+project_dir> ./mvnw test
 ```
